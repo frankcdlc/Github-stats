@@ -7,4 +7,8 @@ export async function login(credentials) {
   return user;
 }
 
+export function logout() {
+  return githubClient("/logout", { method: "DELETE" });
+}
+
 
