@@ -9,7 +9,7 @@ export async function createUser(userData) {
 }
 
 export async function getUser() {
-  const { token, ...user } = await githubClient("/profile");
+  const { _token, ...user } = await githubClient("/profile");
   return user;
 }
 
