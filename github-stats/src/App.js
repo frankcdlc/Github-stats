@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import AnAuthenticatedApp from './anAunthetincatedApp';
 import './App.css';
 import AuthenticatedApp from './authenticatedApp';
 import { login } from './services/session-services';
 import { createUser, getUser } from './services/user-services';
+import UnAuthenticatedApp from './unAunthetincatedApp';
 function App() {
   /**
    * this state was create to know if the user exist or not when execute the app
@@ -29,7 +29,7 @@ function App() {
 
 
   return (
-    user ? <AuthenticatedApp/> : <AnAuthenticatedApp onLogin={handleLogin} onSignUp={handleSignUp}/>
+    user ? <AuthenticatedApp/> : <UnAuthenticatedApp onLogin={handleLogin} onSignUp={handleSignUp}/>
   )
 
 
