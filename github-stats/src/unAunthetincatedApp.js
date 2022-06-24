@@ -3,7 +3,7 @@ import { LoginForm } from './components/login-form';
 import { SignUpForm } from './components/signup-form';
 
 
-function AnAuthenticatedApp({onLogin, onSignUp }) {
+function UnAuthenticatedApp({onLogin, onSignUp }) {
   const [showLogin, setShowLogin] = useState(true);
 
   function handleClick(e) {
@@ -21,4 +21,4 @@ function AnAuthenticatedApp({onLogin, onSignUp }) {
   )
 }
 
-export default AnAuthenticatedApp
+export default UnAuthenticatedApp
