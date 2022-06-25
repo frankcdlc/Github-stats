@@ -1,8 +1,17 @@
 import React from 'react'
+import { useAuth } from './context/services-context'
 
 function AuthenticatedApp(){
+
+  const {logout} = useAuth();
+
   return (
-    <div>Content to authenticatedApp</div>
+    <div>
+      <button onClick={logout} >
+        Logout
+      </button>
+      <div>Content to authenticatedApp</div>
+    </div>
   )
 }
 
