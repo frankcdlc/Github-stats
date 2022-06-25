@@ -31,7 +31,7 @@ export function SignUpForm() {
   return(
     <div>
       <div>Sign Up</div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <Input
         label="Email"
         name="email"
@@ -64,7 +64,7 @@ export function SignUpForm() {
         placeholder="your last name"
         onChange={handleChange}
         />
-        <button onClick={handleSubmit}>Sign Up</button>
+        <button>Sign Up</button>
       </form>
     </div>
   )

@@ -31,7 +31,7 @@ export function LoginForm({onLogin}) {
   }
   return (
     <div>
-      <form onClick={handleSubmit}>
+      <form onSubmit={handleSubmit}>
          <Input
          label="email: "
           name="email"

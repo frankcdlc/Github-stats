@@ -1,5 +1,6 @@
 import React from 'react'
 import { useAuth } from './context/services-context'
+import SearchPage from './pages/search-page';
 
 function AuthenticatedApp(){
 
@@ -10,7 +11,9 @@ function AuthenticatedApp(){
       <button onClick={logout} >
         Logout
       </button>
-      <div>Content to authenticatedApp</div>
+      <div>
+        <SearchPage/>
+      </div>
     </div>
   )
 }
