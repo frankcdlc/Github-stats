@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useAuth } from "../context/services-context";
 // import { login } from "../services/session-services";
-import Input from "./input"; 
+import Input from "./input";
 
 
 
@@ -11,6 +12,8 @@ export function LoginForm({onLogin}) {
     password: "",
   });
 
+  const {login} = useAuth();
+
   // const [user, setUser] = useState(null)
   const { email, password } = formData;
   
@@ -18,7 +21,7 @@ export function LoginForm({onLogin}) {
     event.preventDefault();
     // console.log({formData})
     // login(formData)
-    onLogin(formData)
+    login(formData)
     
   }
 
