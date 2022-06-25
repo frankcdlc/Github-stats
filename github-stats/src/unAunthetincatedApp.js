@@ -15,7 +15,7 @@ function UnAuthenticatedApp({onLogin, onSignUp }) {
   return (
     <div>
       <h1>Welcome to Poke Collection</h1>
-      {showLogin ? <LoginForm onLogin={onLogin}/> : <SignUpForm onSignUp={onSignUp}/>}
+      {showLogin ? <LoginForm/> : <SignUpForm/>}
       <button onClick={handleClick} >{showLogin ? "SignUp" : "Login"}</button>
     </div>
   )
