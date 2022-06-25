@@ -30,6 +30,7 @@ function AuthProvider({children}) {
   
     function handleLogout() {
       logout().then(()=> sessionStorage.removeItem(tokenKey))
+      setUser(null)
     }
   
 
