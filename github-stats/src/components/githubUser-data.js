@@ -1,15 +1,23 @@
 import {RiStarLine} from "react-icons/ri";
+import {RiStarFill} from "react-icons/ri";
 
-function GithubUserData({githubUser}) {
+import styled from '@emotion/styled';
+
+const FavoriteButton = styled.button`
   
+`
+
+/**para que esta función sepa si el usario es favorito o no se le pasa como un prop */
+function GithubUserData({githubUser, onAddFavorite, isFavorite, onDeleteFav}) {
+
   return (
     <div>
       <img src={githubUser.avatar_url} alt="user" />
       <div style={{display: "flex"}}>
         <h2>{githubUser.name}</h2>
-        <button>
-          <RiStarLine/>
-        </button>
+        <FavoriteButton  onClick={isFavorite ? onDeleteFav : onAddFavorite}>
+          {isFavorite ? <RiStarFill/> : <RiStarLine/>}
+        </FavoriteButton>
       </div>
       <p>{githubUser.bio}</p>
       <div>
