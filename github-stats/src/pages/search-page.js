@@ -15,6 +15,17 @@ function SearchPage() {
         .catch(console.log);
       }
  
+  function handleAddFavorite(e) {
+    const data = {
+        name: githubUser.name,
+        username: githubUser["login"],
+        avatar_url: githubUser["avatar_url"]
+    }
+
+    createFavorite(data).then((newfav => setFavorites([...favorites, newfav])))
+                        .catch(console.log);
+
+
   return (
     <form onSubmit={handleSubmit}>
       <Input 
